@@ -356,3 +356,676 @@
 
 23:03:58.468 [main] DEBUG com.intuit.karate - response time in milliseconds: 934
 23:03:58.487 [main] INFO  com.intuit.karate - [print] created id is: 11
+23:50:13.173 [main] INFO  com.intuit.karate - karate.env system property was: null 
+23:50:13.764 [main] DEBUG com.intuit.karate - 
+1 > POST http://localhost:4000/graphql
+1 > Accept: application/json
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 62
+1 > Content-Type: application/json
+1 > Host: localhost:4000
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_151)
+{"query":"{\n  user(id: \"a\") {\n    id,\n    name\n  }\n}s"}
+
+23:50:13.807 [main] DEBUG com.intuit.karate - 
+1 < 400
+1 < Connection: keep-alive
+1 < Content-Length: 145
+1 < Content-Type: application/json; charset=utf-8
+1 < Date: Wed, 15 Nov 2017 14:50:13 GMT
+1 < ETag: W/"91-Rr68BrrSTPangdUgZDko7iPLLzM"
+1 < X-Powered-By: Express
+{"errors":[{"message":"Syntax Error GraphQL request (6:2) Unexpected Name \"s\"\n\n5:   }\n6: }s\n    ^\n","locations":[{"line":6,"column":2}]}]}
+
+23:50:13.808 [main] DEBUG com.intuit.karate - response time in milliseconds: 464
+23:50:13.809 [main] ERROR com.intuit.karate - status code was: 400, expected: 200, response time: 464, url: http://localhost:4000/graphql, response: {"errors":[{"message":"Syntax Error GraphQL request (6:2) Unexpected Name \"s\"\n\n5:   }\n6: }s\n    ^\n","locations":[{"line":6,"column":2}]}]}
+23:53:29.546 [main] INFO  com.intuit.karate - karate.env system property was: null 
+23:53:29.926 [main] DEBUG com.intuit.karate - 
+1 > GET https://jsonplaceholder.typicode.com/users
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: jsonplaceholder.typicode.com
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_151)
+
+23:53:31.272 [main] DEBUG com.intuit.karate - 
+1 < 200
+1 < Access-Control-Allow-Credentials: true
+1 < CF-Cache-Status: REVALIDATED
+1 < CF-RAY: 3be30ab28e5e8460-HKG
+1 < Cache-Control: public, max-age=14400
+1 < Connection: keep-alive
+1 < Content-Type: application/json; charset=utf-8
+1 < Date: Wed, 15 Nov 2017 14:53:45 GMT
+1 < Etag: W/"160d-1eMSsxeJRfnVLRBmYJSbCiJZ1qQ"
+1 < Expires: Wed, 15 Nov 2017 18:53:45 GMT
+1 < Pragma: no-cache
+1 < Server: cloudflare-nginx
+1 < Set-Cookie: __cfduid=db1bd39ecd830496608bfb2dc1e946b161510757624; expires=Thu, 15-Nov-18 14:53:44 GMT; path=/; domain=.typicode.com; HttpOnly
+1 < Transfer-Encoding: chunked
+1 < Vary: Accept-Encoding
+1 < Via: 1.1 vegur
+1 < X-Content-Type-Options: nosniff
+1 < X-Powered-By: Express
+[
+  {
+    "id": 1,
+    "name": "Leanne Graham",
+    "username": "Bret",
+    "email": "Sincere@april.biz",
+    "address": {
+      "street": "Kulas Light",
+      "suite": "Apt. 556",
+      "city": "Gwenborough",
+      "zipcode": "92998-3874",
+      "geo": {
+        "lat": "-37.3159",
+        "lng": "81.1496"
+      }
+    },
+    "phone": "1-770-736-8031 x56442",
+    "website": "hildegard.org",
+    "company": {
+      "name": "Romaguera-Crona",
+      "catchPhrase": "Multi-layered client-server neural-net",
+      "bs": "harness real-time e-markets"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Ervin Howell",
+    "username": "Antonette",
+    "email": "Shanna@melissa.tv",
+    "address": {
+      "street": "Victor Plains",
+      "suite": "Suite 879",
+      "city": "Wisokyburgh",
+      "zipcode": "90566-7771",
+      "geo": {
+        "lat": "-43.9509",
+        "lng": "-34.4618"
+      }
+    },
+    "phone": "010-692-6593 x09125",
+    "website": "anastasia.net",
+    "company": {
+      "name": "Deckow-Crist",
+      "catchPhrase": "Proactive didactic contingency",
+      "bs": "synergize scalable supply-chains"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Clementine Bauch",
+    "username": "Samantha",
+    "email": "Nathan@yesenia.net",
+    "address": {
+      "street": "Douglas Extension",
+      "suite": "Suite 847",
+      "city": "McKenziehaven",
+      "zipcode": "59590-4157",
+      "geo": {
+        "lat": "-68.6102",
+        "lng": "-47.0653"
+      }
+    },
+    "phone": "1-463-123-4447",
+    "website": "ramiro.info",
+    "company": {
+      "name": "Romaguera-Jacobson",
+      "catchPhrase": "Face to face bifurcated interface",
+      "bs": "e-enable strategic applications"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Patricia Lebsack",
+    "username": "Karianne",
+    "email": "Julianne.OConner@kory.org",
+    "address": {
+      "street": "Hoeger Mall",
+      "suite": "Apt. 692",
+      "city": "South Elvis",
+      "zipcode": "53919-4257",
+      "geo": {
+        "lat": "29.4572",
+        "lng": "-164.2990"
+      }
+    },
+    "phone": "493-170-9623 x156",
+    "website": "kale.biz",
+    "company": {
+      "name": "Robel-Corkery",
+      "catchPhrase": "Multi-tiered zero tolerance productivity",
+      "bs": "transition cutting-edge web services"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Chelsey Dietrich",
+    "username": "Kamren",
+    "email": "Lucio_Hettinger@annie.ca",
+    "address": {
+      "street": "Skiles Walks",
+      "suite": "Suite 351",
+      "city": "Roscoeview",
+      "zipcode": "33263",
+      "geo": {
+        "lat": "-31.8129",
+        "lng": "62.5342"
+      }
+    },
+    "phone": "(254)954-1289",
+    "website": "demarco.info",
+    "company": {
+      "name": "Keebler LLC",
+      "catchPhrase": "User-centric fault-tolerant solution",
+      "bs": "revolutionize end-to-end systems"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Mrs. Dennis Schulist",
+    "username": "Leopoldo_Corkery",
+    "email": "Karley_Dach@jasper.info",
+    "address": {
+      "street": "Norberto Crossing",
+      "suite": "Apt. 950",
+      "city": "South Christy",
+      "zipcode": "23505-1337",
+      "geo": {
+        "lat": "-71.4197",
+        "lng": "71.7478"
+      }
+    },
+    "phone": "1-477-935-8478 x6430",
+    "website": "ola.org",
+    "company": {
+      "name": "Considine-Lockman",
+      "catchPhrase": "Synchronised bottom-line interface",
+      "bs": "e-enable innovative applications"
+    }
+  },
+  {
+    "id": 7,
+    "name": "Kurtis Weissnat",
+    "username": "Elwyn.Skiles",
+    "email": "Telly.Hoeger@billy.biz",
+    "address": {
+      "street": "Rex Trail",
+      "suite": "Suite 280",
+      "city": "Howemouth",
+      "zipcode": "58804-1099",
+      "geo": {
+        "lat": "24.8918",
+        "lng": "21.8984"
+      }
+    },
+    "phone": "210.067.6132",
+    "website": "elvis.io",
+    "company": {
+      "name": "Johns Group",
+      "catchPhrase": "Configurable multimedia task-force",
+      "bs": "generate enterprise e-tailers"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Nicholas Runolfsdottir V",
+    "username": "Maxime_Nienow",
+    "email": "Sherwood@rosamond.me",
+    "address": {
+      "street": "Ellsworth Summit",
+      "suite": "Suite 729",
+      "city": "Aliyaview",
+      "zipcode": "45169",
+      "geo": {
+        "lat": "-14.3990",
+        "lng": "-120.7677"
+      }
+    },
+    "phone": "586.493.6943 x140",
+    "website": "jacynthe.com",
+    "company": {
+      "name": "Abernathy Group",
+      "catchPhrase": "Implemented secondary concept",
+      "bs": "e-enable extensible e-tailers"
+    }
+  },
+  {
+    "id": 9,
+    "name": "Glenna Reichert",
+    "username": "Delphine",
+    "email": "Chaim_McDermott@dana.io",
+    "address": {
+      "street": "Dayna Park",
+      "suite": "Suite 449",
+      "city": "Bartholomebury",
+      "zipcode": "76495-3109",
+      "geo": {
+        "lat": "24.6463",
+        "lng": "-168.8889"
+      }
+    },
+    "phone": "(775)976-6794 x41206",
+    "website": "conrad.com",
+    "company": {
+      "name": "Yost and Sons",
+      "catchPhrase": "Switchable contextually-based project",
+      "bs": "aggregate real-time technologies"
+    }
+  },
+  {
+    "id": 10,
+    "name": "Clementina DuBuque",
+    "username": "Moriah.Stanton",
+    "email": "Rey.Padberg@karina.biz",
+    "address": {
+      "street": "Kattie Turnpike",
+      "suite": "Suite 198",
+      "city": "Lebsackbury",
+      "zipcode": "31428-2261",
+      "geo": {
+        "lat": "-38.2386",
+        "lng": "57.2232"
+      }
+    },
+    "phone": "024-648-3804",
+    "website": "ambrose.net",
+    "company": {
+      "name": "Hoeger LLC",
+      "catchPhrase": "Centralized empowering task-force",
+      "bs": "target end-to-end models"
+    }
+  }
+]
+
+23:53:31.273 [main] DEBUG com.intuit.karate - response time in milliseconds: 1685
+23:53:31.368 [main] DEBUG com.intuit.karate - 
+2 > GET https://jsonplaceholder.typicode.com/users/1
+2 > Accept-Encoding: gzip,deflate
+2 > Connection: Keep-Alive
+2 > Cookie: __cfduid=db1bd39ecd830496608bfb2dc1e946b161510757624
+2 > Host: jsonplaceholder.typicode.com
+2 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_151)
+
+23:53:31.589 [main] DEBUG com.intuit.karate - 
+2 < 200
+2 < Access-Control-Allow-Credentials: true
+2 < CF-Cache-Status: HIT
+2 < CF-RAY: 3be30ab859fa8460-HKG
+2 < Cache-Control: public, max-age=14400
+2 < Connection: keep-alive
+2 < Content-Type: application/json; charset=utf-8
+2 < Date: Wed, 15 Nov 2017 14:53:45 GMT
+2 < Etag: W/"1fd-+2Y3G3w049iSZtw5t1mzSnunngE"
+2 < Expires: Wed, 15 Nov 2017 18:53:45 GMT
+2 < Pragma: no-cache
+2 < Server: cloudflare-nginx
+2 < Transfer-Encoding: chunked
+2 < Vary: Accept-Encoding
+2 < Via: 1.1 vegur
+2 < X-Content-Type-Options: nosniff
+2 < X-Powered-By: Express
+{
+  "id": 1,
+  "name": "Leanne Graham",
+  "username": "Bret",
+  "email": "Sincere@april.biz",
+  "address": {
+    "street": "Kulas Light",
+    "suite": "Apt. 556",
+    "city": "Gwenborough",
+    "zipcode": "92998-3874",
+    "geo": {
+      "lat": "-37.3159",
+      "lng": "81.1496"
+    }
+  },
+  "phone": "1-770-736-8031 x56442",
+  "website": "hildegard.org",
+  "company": {
+    "name": "Romaguera-Crona",
+    "catchPhrase": "Multi-layered client-server neural-net",
+    "bs": "harness real-time e-markets"
+  }
+}
+
+23:53:31.590 [main] DEBUG com.intuit.karate - response time in milliseconds: 224
+23:53:31.659 [main] INFO  com.intuit.karate - karate.env system property was: null 
+23:53:31.681 [main] DEBUG com.intuit.karate - 
+1 > POST https://jsonplaceholder.typicode.com/users
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 160
+1 > Content-Type: application/json
+1 > Host: jsonplaceholder.typicode.com
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_151)
+{"name":"Test User","username":"testuser","email":"test@user.com","address":{"street":"Has No Name","suite":"Apt. 123","city":"Electri","zipcode":"54321-6789"}}
+
+23:53:32.804 [main] DEBUG com.intuit.karate - 
+1 < 201
+1 < Access-Control-Allow-Credentials: true
+1 < Access-Control-Expose-Headers: Location
+1 < CF-RAY: 3be30aba7dfb1962-HKG
+1 < Cache-Control: no-cache
+1 < Connection: keep-alive
+1 < Content-Length: 216
+1 < Content-Type: application/json; charset=utf-8
+1 < Date: Wed, 15 Nov 2017 14:53:46 GMT
+1 < Etag: W/"d8-pYV7+YuMGP2hxHPU9ARrf97ifDA"
+1 < Expires: -1
+1 < Location: http://jsonplaceholder.typicode.com/users/11
+1 < Pragma: no-cache
+1 < Server: cloudflare-nginx
+1 < Set-Cookie: __cfduid=da7333f5e5f8daa4287f4552d5a6188d51510757626; expires=Thu, 15-Nov-18 14:53:46 GMT; path=/; domain=.typicode.com; HttpOnly
+1 < Vary: Origin, X-HTTP-Method-Override, Accept-Encoding
+1 < Via: 1.1 vegur
+1 < X-Content-Type-Options: nosniff
+1 < X-Powered-By: Express
+{
+  "name": "Test User",
+  "username": "testuser",
+  "email": "test@user.com",
+  "address": {
+    "street": "Has No Name",
+    "suite": "Apt. 123",
+    "city": "Electri",
+    "zipcode": "54321-6789"
+  },
+  "id": 11
+}
+
+23:53:32.804 [main] DEBUG com.intuit.karate - response time in milliseconds: 1124
+23:53:32.822 [main] INFO  com.intuit.karate - [print] created id is: 11
+23:54:43.652 [main] INFO  com.intuit.karate - karate.env system property was: null 
+23:54:44.141 [main] DEBUG com.intuit.karate - 
+1 > GET http://localhost:4000/graphql
+1 > Accept: application/json
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: localhost:4000
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_151)
+
+23:54:44.180 [main] DEBUG com.intuit.karate - 
+1 < 400
+1 < Connection: keep-alive
+1 < Content-Length: 53
+1 < Content-Type: application/json; charset=utf-8
+1 < Date: Wed, 15 Nov 2017 14:54:44 GMT
+1 < ETag: W/"35-rkfaW07yp80JIwkYI6hoaXIO3bI"
+1 < X-Powered-By: Express
+{"errors":[{"message":"Must provide query string."}]}
+
+23:54:44.180 [main] DEBUG com.intuit.karate - response time in milliseconds: 418
+23:54:44.182 [main] ERROR com.intuit.karate - status code was: 400, expected: 200, response time: 418, url: http://localhost:4000/graphql, response: {"errors":[{"message":"Must provide query string."}]}
+23:55:27.595 [main] INFO  com.intuit.karate - karate.env system property was: null 
+23:55:27.978 [main] DEBUG com.intuit.karate - 
+1 > GET http://localhost:4000/graphql
+1 > Accept: application/json
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: localhost:4000
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_151)
+
+23:55:28.005 [main] DEBUG com.intuit.karate - 
+1 < 400
+1 < Connection: keep-alive
+1 < Content-Length: 53
+1 < Content-Type: application/json; charset=utf-8
+1 < Date: Wed, 15 Nov 2017 14:55:27 GMT
+1 < ETag: W/"35-rkfaW07yp80JIwkYI6hoaXIO3bI"
+1 < X-Powered-By: Express
+{"errors":[{"message":"Must provide query string."}]}
+
+23:55:28.005 [main] DEBUG com.intuit.karate - response time in milliseconds: 305
+23:55:28.006 [main] ERROR com.intuit.karate - status code was: 400, expected: 200, response time: 305, url: http://localhost:4000/graphql, response: {"errors":[{"message":"Must provide query string."}]}
+23:57:05.578 [main] INFO  com.intuit.karate - karate.env system property was: null 
+23:57:05.987 [main] DEBUG com.intuit.karate - 
+1 > GET http://localhost:4000/graphql
+1 > Accept: application/json
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: localhost:4000
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_151)
+
+23:57:06.012 [main] DEBUG com.intuit.karate - 
+1 < 400
+1 < Connection: keep-alive
+1 < Content-Length: 53
+1 < Content-Type: application/json; charset=utf-8
+1 < Date: Wed, 15 Nov 2017 14:57:06 GMT
+1 < ETag: W/"35-rkfaW07yp80JIwkYI6hoaXIO3bI"
+1 < X-Powered-By: Express
+{"errors":[{"message":"Must provide query string."}]}
+
+23:57:06.012 [main] DEBUG com.intuit.karate - response time in milliseconds: 333
+23:57:06.014 [main] ERROR com.intuit.karate - status code was: 400, expected: 200, response time: 333, url: http://localhost:4000/graphql, response: {"errors":[{"message":"Must provide query string."}]}
+23:58:58.679 [main] INFO  com.intuit.karate - karate.env system property was: null 
+23:58:59.167 [main] DEBUG com.intuit.karate - 
+1 > GET http://localhost:4000/graphql
+1 > Accept: application/json
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: localhost:4000
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_151)
+
+23:58:59.208 [main] DEBUG com.intuit.karate - 
+1 < 400
+1 < Connection: keep-alive
+1 < Content-Length: 53
+1 < Content-Type: application/json; charset=utf-8
+1 < Date: Wed, 15 Nov 2017 14:58:59 GMT
+1 < ETag: W/"35-rkfaW07yp80JIwkYI6hoaXIO3bI"
+1 < X-Powered-By: Express
+{"errors":[{"message":"Must provide query string."}]}
+
+23:58:59.209 [main] DEBUG com.intuit.karate - response time in milliseconds: 410
+23:58:59.213 [main] ERROR com.intuit.karate - status code was: 400, expected: 200, response time: 410, url: http://localhost:4000/graphql, response: {"errors":[{"message":"Must provide query string."}]}
+23:59:21.778 [main] INFO  com.intuit.karate - karate.env system property was: null 
+23:59:22.833 [main] DEBUG com.intuit.karate - 
+1 > GET http://localhost:4000/graphql
+1 > Accept: application/json
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: localhost:4000
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_151)
+
+23:59:22.896 [main] DEBUG com.intuit.karate - 
+1 < 400
+1 < Connection: keep-alive
+1 < Content-Length: 53
+1 < Content-Type: application/json; charset=utf-8
+1 < Date: Wed, 15 Nov 2017 14:59:22 GMT
+1 < ETag: W/"35-rkfaW07yp80JIwkYI6hoaXIO3bI"
+1 < X-Powered-By: Express
+{"errors":[{"message":"Must provide query string."}]}
+
+23:59:22.898 [main] DEBUG com.intuit.karate - response time in milliseconds: 869
+23:59:22.900 [main] ERROR com.intuit.karate - status code was: 400, expected: 200, response time: 869, url: http://localhost:4000/graphql, response: {"errors":[{"message":"Must provide query string."}]}
+00:02:26.303 [main] INFO  com.intuit.karate - karate.env system property was: null 
+00:02:27.421 [main] DEBUG com.intuit.karate - 
+1 > GET http://localhost:4000/graphql
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: localhost:4000
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_151)
+
+00:02:27.493 [main] DEBUG com.intuit.karate - 
+1 < 400
+1 < Connection: keep-alive
+1 < Content-Length: 53
+1 < Content-Type: application/json; charset=utf-8
+1 < Date: Wed, 15 Nov 2017 15:02:27 GMT
+1 < ETag: W/"35-rkfaW07yp80JIwkYI6hoaXIO3bI"
+1 < X-Powered-By: Express
+{"errors":[{"message":"Must provide query string."}]}
+
+00:02:27.495 [main] DEBUG com.intuit.karate - response time in milliseconds: 939
+00:02:27.501 [main] ERROR com.intuit.karate - status code was: 400, expected: 200, response time: 939, url: http://localhost:4000/graphql, response: {"errors":[{"message":"Must provide query string."}]}
+00:03:26.189 [main] INFO  com.intuit.karate - karate.env system property was: null 
+00:03:27.230 [main] DEBUG com.intuit.karate - 
+1 > GET http://localhost:4000/graphql
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: localhost:4000
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_151)
+
+00:03:27.303 [main] DEBUG com.intuit.karate - 
+1 < 400
+1 < Connection: keep-alive
+1 < Content-Length: 53
+1 < Content-Type: application/json; charset=utf-8
+1 < Date: Wed, 15 Nov 2017 15:03:27 GMT
+1 < ETag: W/"35-rkfaW07yp80JIwkYI6hoaXIO3bI"
+1 < X-Powered-By: Express
+{"errors":[{"message":"Must provide query string."}]}
+
+00:03:27.305 [main] DEBUG com.intuit.karate - response time in milliseconds: 850
+00:03:27.309 [main] ERROR com.intuit.karate - status code was: 400, expected: 200, response time: 850, url: http://localhost:4000/graphql, response: {"errors":[{"message":"Must provide query string."}]}
+00:03:54.478 [main] INFO  com.intuit.karate - karate.env system property was: null 
+00:03:55.889 [main] DEBUG com.intuit.karate - 
+1 > GET http://localhost:4000/graphql/
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: localhost:4000
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_151)
+
+00:03:55.942 [main] DEBUG com.intuit.karate - 
+1 < 400
+1 < Connection: keep-alive
+1 < Content-Length: 53
+1 < Content-Type: application/json; charset=utf-8
+1 < Date: Wed, 15 Nov 2017 15:03:55 GMT
+1 < ETag: W/"35-rkfaW07yp80JIwkYI6hoaXIO3bI"
+1 < X-Powered-By: Express
+{"errors":[{"message":"Must provide query string."}]}
+
+00:03:55.944 [main] DEBUG com.intuit.karate - response time in milliseconds: 921
+00:03:55.947 [main] ERROR com.intuit.karate - status code was: 400, expected: 200, response time: 921, url: http://localhost:4000/graphql/, response: {"errors":[{"message":"Must provide query string."}]}
+00:04:39.717 [main] INFO  com.intuit.karate - karate.env system property was: null 
+00:04:40.620 [main] DEBUG com.intuit.karate - 
+1 > GET http://localhost:4000/graphql
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: localhost:4000
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_151)
+
+00:04:40.676 [main] DEBUG com.intuit.karate - 
+1 < 400
+1 < Connection: keep-alive
+1 < Content-Length: 53
+1 < Content-Type: application/json; charset=utf-8
+1 < Date: Wed, 15 Nov 2017 15:04:40 GMT
+1 < ETag: W/"35-rkfaW07yp80JIwkYI6hoaXIO3bI"
+1 < X-Powered-By: Express
+{"errors":[{"message":"Must provide query string."}]}
+
+00:04:40.679 [main] DEBUG com.intuit.karate - response time in milliseconds: 714
+00:04:40.682 [main] ERROR com.intuit.karate - status code was: 400, expected: 200, response time: 714, url: http://localhost:4000/graphql, response: {"errors":[{"message":"Must provide query string."}]}
+00:05:00.651 [main] INFO  com.intuit.karate - karate.env system property was: null 
+00:05:01.578 [main] DEBUG com.intuit.karate - 
+1 > GET http://localhost:4000/graphql
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: localhost:4000
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_151)
+
+00:05:01.636 [main] DEBUG com.intuit.karate - 
+1 < 400
+1 < Connection: keep-alive
+1 < Content-Length: 53
+1 < Content-Type: application/json; charset=utf-8
+1 < Date: Wed, 15 Nov 2017 15:05:01 GMT
+1 < ETag: W/"35-rkfaW07yp80JIwkYI6hoaXIO3bI"
+1 < X-Powered-By: Express
+{"errors":[{"message":"Must provide query string."}]}
+
+00:05:01.638 [main] DEBUG com.intuit.karate - response time in milliseconds: 702
+00:05:01.641 [main] ERROR com.intuit.karate - status code was: 400, expected: 200, response time: 702, url: http://localhost:4000/graphql, response: {"errors":[{"message":"Must provide query string."}]}
+00:07:09.535 [main] INFO  com.intuit.karate - karate.env system property was: null 
+00:07:11.448 [main] DEBUG com.intuit.karate - 
+1 > GET http://localhost:4000/graphql
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: localhost:4000
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_151)
+
+00:07:11.593 [main] DEBUG com.intuit.karate - 
+1 < 400
+1 < Connection: keep-alive
+1 < Content-Length: 53
+1 < Content-Type: application/json; charset=utf-8
+1 < Date: Wed, 15 Nov 2017 15:07:11 GMT
+1 < ETag: W/"35-rkfaW07yp80JIwkYI6hoaXIO3bI"
+1 < X-Powered-By: Express
+{"errors":[{"message":"Must provide query string."}]}
+
+00:07:11.599 [main] DEBUG com.intuit.karate - response time in milliseconds: 1487
+00:07:11.607 [main] ERROR com.intuit.karate - status code was: 400, expected: 200, response time: 1487, url: http://localhost:4000/graphql, response: {"errors":[{"message":"Must provide query string."}]}
+00:07:56.790 [main] INFO  com.intuit.karate - karate.env system property was: null 
+00:07:58.139 [main] DEBUG com.intuit.karate - 
+1 > POST http://localhost:4000/graphql
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 60
+1 > Content-Type: application/json
+1 > Host: localhost:4000
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_151)
+{"query":"{\n  user(id: \"a\") {\n    id\n    name\n  }\n}"}
+
+00:07:58.241 [main] DEBUG com.intuit.karate - 
+1 < 200
+1 < Connection: keep-alive
+1 < Content-Length: 43
+1 < Content-Type: application/json; charset=utf-8
+1 < Date: Wed, 15 Nov 2017 15:07:58 GMT
+1 < ETag: W/"2b-qPoo0N1MDtjtI+KEEbZA5Mz4Ndo"
+1 < X-Powered-By: Express
+{"data":{"user":{"id":"a","name":"alice"}}}
+
+00:07:58.243 [main] DEBUG com.intuit.karate - response time in milliseconds: 1104
+00:09:06.729 [main] INFO  com.intuit.karate - karate.env system property was: null 
+00:09:08.094 [main] DEBUG com.intuit.karate - 
+1 > POST http://localhost:4000/graphql
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 60
+1 > Content-Type: application/json
+1 > Host: localhost:4000
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_151)
+{"query":"{\n  user(id: \"a\") {\n    id\n    name\n  }\n}"}
+
+00:09:08.175 [main] DEBUG com.intuit.karate - 
+1 < 200
+1 < Connection: keep-alive
+1 < Content-Length: 43
+1 < Content-Type: application/json; charset=utf-8
+1 < Date: Wed, 15 Nov 2017 15:09:08 GMT
+1 < ETag: W/"2b-qPoo0N1MDtjtI+KEEbZA5Mz4Ndo"
+1 < X-Powered-By: Express
+{"data":{"user":{"id":"a","name":"alice"}}}
+
+00:09:08.180 [main] DEBUG com.intuit.karate - response time in milliseconds: 1107
+00:09:08.362 [main] INFO  com.intuit.karate - karate.env system property was: null 
+00:09:08.486 [main] DEBUG com.intuit.karate - 
+1 > POST http://localhost:4000/graphql
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 60
+1 > Content-Type: application/json
+1 > Host: localhost:4000
+1 > User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_151)
+{"query":"{\n  user(id: \"b\") {\n    id\n    name\n  }\n}"}
+
+00:09:08.507 [main] DEBUG com.intuit.karate - 
+1 < 200
+1 < Connection: keep-alive
+1 < Content-Length: 41
+1 < Content-Type: application/json; charset=utf-8
+1 < Date: Wed, 15 Nov 2017 15:09:08 GMT
+1 < ETag: W/"29-OiXzu4xcMNaYBhtVQ0UCNAp1szk"
+1 < X-Powered-By: Express
+{"data":{"user":{"id":"b","name":"bob"}}}
+
+00:09:08.507 [main] DEBUG com.intuit.karate - response time in milliseconds: 26
