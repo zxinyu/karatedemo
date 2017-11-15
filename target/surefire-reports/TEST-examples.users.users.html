@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>examples/users/users.feature</title>
+</head>
+<body>
+<div>
+<div>get all users and then get the first user by id</div>
+<div>
+<div>url 'https://jsonplaceholder.typicode.com' passed</div>
+<div>path 'users' passed</div>
+<div>method get passed</div>
+<div>status 200 passed</div>
+<div>def first = response[0] passed</div>
+<div>path 'users', first.id passed</div>
+<div>method get passed</div>
+<div>status 200 passed</div>
+</div>
+</div>
+<div>
+<div>create a user and then get it by id</div>
+<div>
+<div>url 'https://jsonplaceholder.typicode.com' passed</div>
+<div>def user = passed</div>
+<div>url 'https://jsonplaceholder.typicode.com/users' passed</div>
+<div>request user passed</div>
+<div>method post passed</div>
+<div>status 201 passed</div>
+<div>def id = response.id passed</div>
+<div>print 'created id is: ' + id passed</div>
+<div>path id passed</div>
+</div>
+</div>
+</body>
+</html>
